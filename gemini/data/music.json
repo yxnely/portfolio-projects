@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "God's Plan",
+        "artist": "Drake"
+    },
+    {
+        "id": 2,
+        "name": "All The Stars (w/ SZA)",
+        "artist": "Kendrick Lamar"
+    },
+    {
+        "id": 3,
+        "name": "Mine",
+        "artist": "Bazi"
+    },
+    {
+        "id": 4,
+        "name": "Stir Fry",
+        "artist": "Migos"
+    },
+    {
+        "id": 5,
+        "name": "Rockstar",
+        "artist": "Post Malone"
+    }
+]
