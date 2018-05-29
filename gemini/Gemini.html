@@ -3,7 +3,6 @@
 	<head>
 		<title>Music</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114029144-1"></script>
 		<script>
@@ -16,12 +15,13 @@
 	<style></style>
 	<body>
 		<div id="app" class="container">
-            <music-list :music="musicChart" name="Music Chart"></music-list>
+            <ul>
+				<li v-for="item in items"></li>></li>
+			</ul>
 		</div>
 	</body>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
-    <script type="text/javascript" src="scripts/music.js"></script>
+    <script type="text/javascript" src="scripts/packages.js"></script>
 </html>

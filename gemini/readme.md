@@ -1,7 +1,7 @@
-# Music Vue
+# Gemini
 
 ### Summary
-For this playground, I am experimenting with the creating `components` in Vue.js.
+Application to help warehouse workers keep track of packages that are received.
 
 ### View In Action
 To see it in action, visit it [here](https://yxnely.github.io/vue-playground/musicVue/Music.html).
