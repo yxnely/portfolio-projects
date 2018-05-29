@@ -1,9 +1,10 @@
 :root {
     --main-color: #A8BCB8;
+    font-family: 'Arial', sans-serif;
 }
 
 .list {
-    margin: 0 auto;
+    margin: 2rem auto;
     max-width: 200px;
 }
 
@@ -15,14 +16,14 @@
         color: white;
         cursor: pointer;
         padding: 1rem 0;
-        margin: 1rem 0;
+        margin-bottom: 1rem;
         text-align: center;
         width: 100%;
     }
 }
 
 .package-container {
-    margin: 0 auto;
+    margin: 2rem auto;
     max-width: 500px;
 
     ul { color: grey; }

@@ -4,8 +4,8 @@ const geminiApp = new Vue({
         packages: [],
         statuses: [],
         activeList: 'All',
-        showList: 0,
-        showOptions: 1
+        showList: false,
+        showOptions: true
     },
     created() {
         fetch('https://yxnely.github.io/portfolio-projects/gemini/data/packages.json', {
@@ -29,6 +29,7 @@ const geminiApp = new Vue({
             .then(res => res.json())
             .then(res => {
                 geminiApp.packages = []
+                geminiApp.activeList = 'All'
                 
                 geminiApp.packages = res.packages
             })
@@ -43,8 +44,8 @@ const geminiApp = new Vue({
                 geminiApp.packages = []
                 this.setState(status)
 
-                this.showList = 1;
-                this.showOptions = 1;
+                this.showList = true
+                this.showOptions = false
 
                 res.packages.forEach(pkg => {
                     if (pkg.status == status) {

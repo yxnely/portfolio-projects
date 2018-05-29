@@ -25,6 +25,7 @@
 			</ul>
 
 			<div class="package-container" v-show="showList">
+				<span onClick="location.reload()">&#8592; Back</span><br><br>
 				<h2>{{ activeList }}</h2>
 				<ul>
 					<li v-for="package in packages">#{{ package.id }}</li>
