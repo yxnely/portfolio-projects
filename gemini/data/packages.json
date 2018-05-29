@@ -1,27 +1,33 @@
-[
-    {
-        "id": 1000,
-        "status": "Pending",
-        "description": "Damaged while loading."
-    },
-    {
-        "id": 1001,
-        "status": "Completed",
-        "description": "Sent via train."
-    },
-    {
-        "id": 1002,
-        "status": "Completed",
-        "description": "Returned to sender."
-    },
-    {
-        "id": 1003,
-        "status": "Pending",
-        "description": "Damaged while loading."
-    },
-    {
-        "id": 1004,
-        "status": "Completed",
-        "description": "Sent via airplane."
-    }
-]
+{
+    "status": [
+        { "id": 1, "text": "Pending" },
+        { "id": 2, "text": "Completed" }
+    ],
+    "packages": [
+        {
+            "id": 1000,
+            "status": 1,
+            "description": "Damaged while loading."
+        },
+        {
+            "id": 1001,
+            "status": 2,
+            "description": "Sent via train."
+        },
+        {
+            "id": 1002,
+            "status": 2,
+            "description": "Returned to sender."
+        },
+        {
+            "id": 1003,
+            "status": 1,
+            "description": "Damaged while loading."
+        },
+        {
+            "id": 1004,
+            "status": 2,
+            "description": "Sent via airplane."
+        }
+    ]
+}

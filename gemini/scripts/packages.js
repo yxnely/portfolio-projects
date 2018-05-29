@@ -4,7 +4,7 @@ const geminiApp = new Vue({
         items: []
 ,    },
     created() {
-        fetch('https://yxnely.github.io/', {
+        fetch('https://yxnely.github.io/portfolio-projects/gemini/data/packages.json', {
             method: 'GET'
         }).then(res => res.json())
         .then(res => {
