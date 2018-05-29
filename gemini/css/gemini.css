@@ -1,0 +1,17 @@
+:root {
+  --main-color: #A8BCB8; }
+
+.list, .status-list, .package-list {
+  margin: 0 auto;
+  max-width: 200px; }
+
+.status-list li {
+  background: var(--main-color);
+  color: white;
+  cursor: pointer;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  text-align: center;
+  width: 100%; }
+
+/*# sourceMappingURL=gemini.css.map */
