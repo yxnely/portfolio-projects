@@ -21,6 +21,14 @@
     }
 }
 
-.package-list {
-    @extend .list;
+.package-container {
+    margin: 0 auto;
+    max-width: 500px;
+
+    ul { color: grey; }
+
+    li {
+        border-bottom: 1px solid grey;
+        padding: 1rem 0;
+    }
 }

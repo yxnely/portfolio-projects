@@ -1,7 +1,7 @@
 :root {
   --main-color: #A8BCB8; }
 
-.list, .status-list, .package-list {
+.list, .status-list {
   margin: 0 auto;
   max-width: 200px; }
 
@@ -13,5 +13,14 @@
   margin: 1rem 0;
   text-align: center;
   width: 100%; }
+
+.package-container {
+  margin: 0 auto;
+  max-width: 500px; }
+  .package-container ul {
+    color: grey; }
+  .package-container li {
+    border-bottom: 1px solid grey;
+    padding: 1rem 0; }
 
 /*# sourceMappingURL=gemini.css.map */
