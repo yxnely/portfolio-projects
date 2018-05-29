@@ -1,12 +1,28 @@
 :root {
   --main-color: #A8BCB8;
-  font-family: 'Arial', sans-serif; }
+  --header-color: #27282D;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px; }
+
+a {
+  color: var(--main-color); }
+
+.header {
+  background: var(--header-color);
+  text-align: center; }
+  .header img {
+    max-height: 30px;
+    margin: 5px 0; }
+
+.container, .package-container, .package-details {
+  margin: 2rem auto;
+  max-width: 500px; }
 
 .list, .status-list {
   margin: 2rem auto;
   max-width: 200px; }
 
-.status-list li {
+.button {
   background: var(--main-color);
   color: white;
   cursor: pointer;
@@ -15,13 +31,31 @@
   text-align: center;
   width: 100%; }
 
-.package-container {
-  margin: 2rem auto;
-  max-width: 500px; }
-  .package-container ul {
-    color: grey; }
-  .package-container li {
-    border-bottom: 1px solid grey;
-    padding: 1rem 0; }
+.status-list {
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+.package-container ul {
+  color: grey; }
+.package-container li {
+  border-bottom: 1px solid grey;
+  cursor: pointer;
+  padding: 1rem 0; }
+
+.package-details h2,
+.package-details h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase; }
+.package-details section {
+  margin-left: 1rem;
+  margin-bottom: 2rem; }
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  width: 100%; }
 
 /*# sourceMappingURL=gemini.css.map */

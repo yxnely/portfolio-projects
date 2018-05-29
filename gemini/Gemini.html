@@ -15,23 +15,36 @@
 			gtag('config', 'UA-114029144-1');
 		</script>
 	</head>
-	<style></style>
 	<body>
+		<div class="header"><a href="https://yxnely.github.io/portfolio-projects/gemini/Gemini.html"><img src="img/gemini.png" alt="Gemini Logo"></a></div>
 		<div id="app" class="container">
             <ul class="status-list" v-show="showOptions">
-				<li @click="filter(1)">Pending</li>
-				<li @click="filter(2)">Completed</li>
-				<li @click="unfilter">All</li>
+				<li class="button" v-for="status in statuses" @click="filter(status.id)">{{ status.text }}</li>
+				<li class="button" @click="showAll">All</li>
 			</ul>
 
 			<div class="package-container" v-show="showList">
-				<span onClick="location.reload()">&#8592; Back</span><br><br>
+				<span @click="reset">&#8592; Back</span><br><br>
 				<h2>{{ activeList }}</h2>
 				<ul>
-					<li v-for="package in packages">#{{ package.id }}</li>
+					<li v-for="package in packages" @click="getItem(package.id)"># {{ package.id }}</li>
 				</ul>
 			</div>
+
+			<div class="package-details" v-show="showDetails">
+				<span @click="resetItem">&#8592; Back</span><br><br>
+				<h2>Details</h2>
+				<section>
+					<h3>ID #</h3>
+					<p>{{ item.id }}</p>
+				</section>
+				<section>
+					<h3>Description</h3>
+					<p>{{ item.description }}</p>
+				</section>
+			</div>
 		</div>
+		<footer>Made with Vue.js by <a href="https://yanelyramirez.com">Yanely Ramirez</a></footer>
 	</body>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -3,9 +3,11 @@ const geminiApp = new Vue({
 	data: {
         packages: [],
         statuses: [],
+        item: [],
         activeList: 'All',
         showList: false,
-        showOptions: true
+        showOptions: true,
+        showDetails: false
     },
     created() {
         fetch('https://yxnely.github.io/portfolio-projects/gemini/data/packages.json', {
@@ -24,12 +26,15 @@ const geminiApp = new Vue({
                 method: 'GET'
             })
         },
-        unfilter() {
+        showAll() {
             this.getAllPackages()
             .then(res => res.json())
             .then(res => {
                 geminiApp.packages = []
                 geminiApp.activeList = 'All'
+
+                this.showList = true
+                this.showOptions = false
                 
                 geminiApp.packages = res.packages
             })
@@ -63,6 +68,24 @@ const geminiApp = new Vue({
                     geminiApp.activeList = x.text
                 }
             })
+        },
+        getItem(id) {
+            this.item = this.packages.find(pkg => pkg.id === id)
+
+            this.showList = false
+            this.showOptions = false
+            this.showDetails = true
+        },
+        reset() {
+            this.showList = false
+            this.showOptions = true
+            geminiApp.packages = []
+        },
+        resetItem() {
+            this.showList = true
+            this.showDetails = false
+
+            this.item = []
         }
     }
 })
