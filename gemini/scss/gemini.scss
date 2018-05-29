@@ -6,20 +6,22 @@
 }
 
 a { color: var(--main-color) }
+span { cursor: pointer; }
 
 .header {
     background: var(--header-color);
     text-align: center;
     
     img {
-        max-height: 30px;
+        max-height: 40px;
         margin: 5px 0;
     }
 }
 
 .container {
     margin: 2rem auto;
-    max-width: 500px;
+    max-width: 550px;
+    width: 95%;
 }
 
 .list {
