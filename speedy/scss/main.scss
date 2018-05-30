@@ -45,13 +45,16 @@ a {
 .input-container {
     margin-top: 3rem;
 
+    > div { position: relative; }
+
     label {
         color: var(--gray);
         font-size: .8rem;
         line-height: 1.5rem;
     }
     
-    input {
+    input,
+    .input {
         border: none;
         border-bottom: 1px solid var(--light-white);
         font-family: 'Avenir', 'Arial', sans-serif;
@@ -60,6 +63,17 @@ a {
         margin-bottom: 3rem;
         padding-bottom: .5rem;
         width: 100%;
+    }
+
+    .input {
+        height: 1rem;
+    }
+
+    .fa {
+        bottom: .5rem;
+        color: var(--main-color);
+        position: absolute;
+        right: .5rem;
     }
 }
 

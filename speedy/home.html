@@ -39,23 +39,16 @@
 			<a href="start.html" class="link">Start a new order?</a>
 		</div>
 
-		<div class="input-container summary">
-			<div>
-				<label for="delivery-type">Type of Delivery</label>
-				<input id="delivery-type" name="delivery-type" type="text" placeholder="">
+		<div class="input-container summary" id="app">
+			<div v-for="option in options">
+				<label>{{ option.text }}</label>
+				<div class="input"></div>
+				<i :class="option.icon"></i>
 			</div>
-			<div>
-				<label for="restaurant">Restaurant</label>
-				<input id="restaurant" name="restaurant" type="text" placeholder="">
-			</div>
-			<div>
-				<label for="order">Order</label>
-				<input id="order" name="order" type="text" placeholder="">
-			</div>
-			<div>
-				<label for="payment">Payment</label>
-				<input id="payment" name="payment" type="text" placeholder="">
-			</div>
-		</div>		
-    </body>
+		</div>
+	</body>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+	<script src="js/main.js"></script>
 </html>

@@ -35,11 +35,14 @@ a.link {
 
 .input-container {
   margin-top: 3rem; }
+  .input-container > div {
+    position: relative; }
   .input-container label {
     color: var(--gray);
     font-size: .8rem;
     line-height: 1.5rem; }
-  .input-container input {
+  .input-container input,
+  .input-container .input {
     border: none;
     border-bottom: 1px solid var(--light-white);
     font-family: 'Avenir', 'Arial', sans-serif;
@@ -48,6 +51,13 @@ a.link {
     margin-bottom: 3rem;
     padding-bottom: .5rem;
     width: 100%; }
+  .input-container .input {
+    height: 1rem; }
+  .input-container .fa {
+    bottom: .5rem;
+    color: var(--main-color);
+    position: absolute;
+    right: .5rem; }
 
 .useful-links {
   margin-top: 2rem; }
