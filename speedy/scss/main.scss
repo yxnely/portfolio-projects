@@ -1,24 +1,33 @@
 :root {
     --main-color: #3CE59E;
     --gray: #3C3C3C;
+    --black: #222222;
+    font-family: 'Avenir', 'Arial', sans-serif;
     font-size: 16px;
 }
 
-a.button {
-    background: var(--main-color);
-    border: none;
-    border-radius: 1rem;
-    color: white;
-    cursor: pointer;
-    display: block;
-    font-size: 1rem;
-    font-style: italic;
-    margin: 0 auto;
-    max-width: 175px;
-    padding: .5rem 0;
-    text-transform: uppercase;
-    text-decoration: none;
-    width: 100%;
+a {
+    &.button {
+        background: var(--main-color);
+        border: none;
+        border-radius: 1rem;
+        color: white;
+        cursor: pointer;
+        display: block;
+        font-size: 1rem;
+        font-style: italic;
+        margin: 0 auto;
+        max-width: 175px;
+        padding: .5rem 0;
+        text-transform: uppercase;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    &.link {
+        color: var(--black);
+        text-decoration: none;
+    }
 }
 
 .login-container {
@@ -38,10 +47,39 @@ a.button {
     input {
         border: none;
         border-bottom: 1px solid var(--gray);
+        font-family: 'Avenir', 'Arial', sans-serif;
         font-size: 1rem;
         outline: none;
         margin-bottom: 3rem;
         padding-bottom: .5rem;
         width: 100%;
+    }
+}
+
+.useful-links {
+    margin-top: 2rem;
+
+    a { font-size: .8rem; }
+
+    a:first-of-type {
+        float: left;
+    }
+
+    a:last-of-type {
+        float: right;
+    }
+}
+
+/* ----------- Home Page ------------- */
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+    width: 95%;
+
+    .fa-bars {
+        cursor: pointer;
+        font-size: 1.5rem;
     }
 }

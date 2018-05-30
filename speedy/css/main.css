@@ -1,6 +1,8 @@
 :root {
   --main-color: #3CE59E;
   --gray: #3C3C3C;
+  --black: #222222;
+  font-family: 'Avenir', 'Arial', sans-serif;
   font-size: 16px; }
 
 a.button {
@@ -18,6 +20,9 @@ a.button {
   text-transform: uppercase;
   text-decoration: none;
   width: 100%; }
+a.link {
+  color: var(--black);
+  text-decoration: none; }
 
 .login-container {
   margin: 0 auto;
@@ -32,10 +37,31 @@ a.button {
   .input-container input {
     border: none;
     border-bottom: 1px solid var(--gray);
+    font-family: 'Avenir', 'Arial', sans-serif;
     font-size: 1rem;
     outline: none;
     margin-bottom: 3rem;
     padding-bottom: .5rem;
     width: 100%; }
+
+.useful-links {
+  margin-top: 2rem; }
+  .useful-links a {
+    font-size: .8rem; }
+  .useful-links a:first-of-type {
+    float: left; }
+  .useful-links a:last-of-type {
+    float: right; }
+
+/* ----------- Home Page ------------- */
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto;
+  width: 95%; }
+  .header .fa-bars {
+    cursor: pointer;
+    font-size: 1.5rem; }
 
 /*# sourceMappingURL=main.css.map */
