@@ -1,0 +1,47 @@
+:root {
+    --main-color: #3CE59E;
+    --gray: #3C3C3C;
+    font-size: 16px;
+}
+
+a.button {
+    background: var(--main-color);
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0 auto;
+    max-width: 175px;
+    padding: .5rem 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 100%;
+}
+
+.login-container {
+    margin: 0 auto;
+    max-width: 350px;
+    text-align: center;
+    width: 95%;
+
+    img {
+        max-width: 300px;
+    }
+}
+
+.input-container {
+    margin-top: 3rem;
+    
+    input {
+        border: none;
+        border-bottom: 1px solid var(--gray);
+        font-size: 1rem;
+        outline: none;
+        margin-bottom: 3rem;
+        padding-bottom: .5rem;
+        width: 100%;
+    }
+}
