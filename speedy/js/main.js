@@ -1,33 +1,41 @@
 const speedyApp = new Vue({
     el: '#app',
     data: {
+        showOptions: false,
+        showOverview: true,
         options: [
             {
                 id: 1,
                 method: 'chooseDeliveryType',
                 text: 'Delivery Type',
-                icon: 'fa fa-th-large'
+                icon: 'fa fa-th-large',
+                chosen: ''
             },
             {
                 id: 2,
                 method: 'chooseRestaurant',
                 text: 'Restaurant',
-                icon: 'fa fa-building'
+                icon: 'fa fa-building',
+                chosen: ''
             },
             {
                 id: 3,
                 method: 'chooseOrder',
                 text: 'Order',
-                icon: 'fa fa-shopping-basket'
+                icon: 'fa fa-shopping-basket',
+                chosen: ''
             },
             {
                 id: 4,
                 method: 'addPayment',
                 text: 'Payment',
-                icon: 'fa fa-money'
+                icon: 'fa fa-money',
+                chosen: ''
             }
         ],
-        types: [
+        types: [],
+        currSelection: null,
+        deliveryTypes: [
             {
                 id: 1,
                 name: 'Restaurant'
@@ -43,10 +51,10 @@ const speedyApp = new Vue({
         ]
     },
     methods: {
-        setMethod(type) {
+        setMethod(type, id) {
             switch(type) {
                 case 'chooseDeliveryType':
-                    this.chooseDeliveryType()
+                    this.chooseDeliveryType(id)
                     break
                 case 'chooseRestaurant':
                     this.chooseRestaurant()
@@ -59,8 +67,12 @@ const speedyApp = new Vue({
                     break
             }
         },
-        chooseDeliveryType() {
-            
+        chooseDeliveryType(methodId) {
+            this.types = this.deliveryTypes
+            this.currSelection = methodId
+
+            this.showOptions = true
+            this.showOverview = false
         },
         chooseRestaurant() {
             console.log('chooseRestaurant')
@@ -70,6 +82,11 @@ const speedyApp = new Vue({
         },
         addPayment() {
             console.log('addPayment')
+        },
+        itemChosen(id) {
+            console.log(currSelection)
+            // const chosenItem = options.map(e => e.id).indexOf(currSelection)
+            // console.log(chosenItem)
         }
     }
 })

@@ -40,14 +40,14 @@
 		</div>
 
 		<div class="input-container summary" id="app">
-			<div v-for="option in options">
+			<div v-for="option in options" v-show="showOverview">
 				<label>{{ option.text }}</label>
-				<div class="input" @click="setMethod(option.method)"></div>
+				<div class="input" @click="setMethod(option.method, option.id)">{{ option.chosen }}</div>
 				<i :class="option.icon"></i>
 			</div>
 
-			<div class="options">
-				<li v-for="type in types">{{ type.name }} <i class="fa fa-plus" @click="itemChosen"></i></li>
+			<div class="options" v-show="showOptions">
+				<li v-for="type in types">{{ type.name }} <i class="fa fa-plus" @click="itemChosen(type.id)"></i></li>
 			</div>
 		</div>
 	</body>

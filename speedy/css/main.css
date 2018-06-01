@@ -100,5 +100,7 @@ a.link {
   list-style: none;
   margin-bottom: 1rem;
   position: relative; }
+.options .fa {
+  cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */
