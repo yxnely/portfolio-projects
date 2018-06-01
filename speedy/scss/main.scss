@@ -66,6 +66,7 @@ a {
     }
 
     .input {
+        cursor: pointer;
         height: 1rem;
     }
 
@@ -121,4 +122,14 @@ a {
     margin: 0 auto;
     max-width: 300px;
     width: 95%;
+}
+
+.options {
+    li {
+        border-bottom: 1px solid var(--light-white);
+        line-height: 2rem;
+        list-style: none;
+        margin-bottom: 1rem;
+        position: relative;
+    }
 }

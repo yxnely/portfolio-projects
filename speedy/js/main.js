@@ -26,9 +26,50 @@ const speedyApp = new Vue({
                 text: 'Payment',
                 icon: 'fa fa-money'
             }
+        ],
+        types: [
+            {
+                id: 1,
+                name: 'Restaurant'
+            },
+            {
+                id: 2,
+                name: 'Fast Food'
+            },
+            {
+                id: 3,
+                name: 'Grocery Store'
+            }
         ]
     },
-    created() {
-        console.log(this.options)
+    methods: {
+        setMethod(type) {
+            switch(type) {
+                case 'chooseDeliveryType':
+                    this.chooseDeliveryType()
+                    break
+                case 'chooseRestaurant':
+                    this.chooseRestaurant()
+                    break
+                case 'chooseOrder':
+                    this.chooseOrder()
+                    break
+                case 'addPayment':
+                    this.addPayment()
+                    break
+            }
+        },
+        chooseDeliveryType() {
+            
+        },
+        chooseRestaurant() {
+            console.log('chooseRestaurant')
+        },
+        chooseOrder() {
+            console.log('chooseOrder')
+        },
+        addPayment() {
+            console.log('addPayment')
+        }
     }
 })

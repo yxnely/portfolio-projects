@@ -42,8 +42,12 @@
 		<div class="input-container summary" id="app">
 			<div v-for="option in options">
 				<label>{{ option.text }}</label>
-				<div class="input"></div>
+				<div class="input" @click="setMethod(option.method)"></div>
 				<i :class="option.icon"></i>
+			</div>
+
+			<div class="options">
+				<li v-for="type in types">{{ type.name }} <i class="fa fa-plus" @click="itemChosen"></i></li>
 			</div>
 		</div>
 	</body>

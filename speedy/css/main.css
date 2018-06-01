@@ -52,6 +52,7 @@ a.link {
     padding-bottom: .5rem;
     width: 100%; }
   .input-container .input {
+    cursor: pointer;
     height: 1rem; }
   .input-container .fa {
     bottom: .5rem;
@@ -92,5 +93,12 @@ a.link {
   margin: 0 auto;
   max-width: 300px;
   width: 95%; }
+
+.options li {
+  border-bottom: 1px solid var(--light-white);
+  line-height: 2rem;
+  list-style: none;
+  margin-bottom: 1rem;
+  position: relative; }
 
 /*# sourceMappingURL=main.css.map */
