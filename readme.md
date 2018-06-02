@@ -1,0 +1,2 @@
+# Intro
+Hello! Welcome to the repo of my portfolio projects. This is a repo that holds the projects featured <a href="https://www.yanelyramirez.com" target="_blank">here</a> on my portfolio site. Feel free to look around and see how the magic happens.
