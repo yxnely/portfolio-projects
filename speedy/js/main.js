@@ -138,6 +138,16 @@ const speedyApp = new Vue({
                 price: 6.00,
                 storeId: 2
             }
+        ],
+        paymentOptions: [
+            {
+                id: 1,
+                name: 'My main credit card'
+            },
+            {
+                id: 2,
+                name: 'My debit card'
+            }
         ]
     },
     methods: {
@@ -175,7 +185,10 @@ const speedyApp = new Vue({
             this.currSelection = methodId
 
             this.showOptions = true
-            this.showOverview = false
+            this.showOverview = 
+            
+            // If user changes store, the store option item selection should change
+            this.options[2].chosen = ''
         },
         chooseOrder(methodId) {
             this.types = []
@@ -191,7 +204,11 @@ const speedyApp = new Vue({
             this.showOverview = false
         },
         addPayment(methodId) {
-            console.log('addPayment')
+            this.types = this.paymentOptions
+            this.currSelection = methodId
+            
+            this.showOptions = true
+            this.showOverview = false
         },
         itemChosen(id) {
             const chosenItem = this.options.map(e => e.id).indexOf(this.currSelection)
