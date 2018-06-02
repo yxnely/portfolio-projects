@@ -133,6 +133,14 @@ a {
         position: relative;
     }
 
+    img {
+        bottom: 10;
+        cursor: pointer;
+        max-height: 15px;
+        position: absolute;
+        right: 10;
+    }
+
     .fa {
         cursor: pointer;
     }
