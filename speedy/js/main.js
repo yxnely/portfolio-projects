@@ -27,6 +27,7 @@ const speedyApp = new Vue({
             }
         ],
         types: [],
+        title: '',
         currSelection: '',
         deliveryOptions: [
             {
@@ -92,25 +93,25 @@ const speedyApp = new Vue({
         storeOptionItems: [
             {
                 id: 1,
-                name: 'Quesalupa Combo',
+                name: 'Jalapeno Poppers',
                 price: 6.50,
                 storeId: 1
             },
             {
                 id: 2,
-                name: 'Crunch Combo',
+                name: 'Mozzarella Sticks',
                 price: 5.50,
                 storeId: 1
             },
             {
                 id: 3,
-                name: 'Pizza Combo',
+                name: 'Pizza',
                 price: 5.00,
                 storeId: 1
             },
             {
                 id: 4,
-                name: 'Nachos Combo',
+                name: 'Nachos',
                 price: 6.00,
                 storeId: 1
             },
@@ -137,6 +138,30 @@ const speedyApp = new Vue({
                 name: 'Dinner Combo',
                 price: 6.00,
                 storeId: 2
+            },
+            {
+                id: 9,
+                name: 'Cheese Burger',
+                price: 6.50,
+                storeId: 3
+            },
+            {
+                id: 10,
+                name: 'Bacon Cheese Burger',
+                price: 5.50,
+                storeId: 3
+            },
+            {
+                id: 11,
+                name: 'Fries',
+                price: 5.00,
+                storeId: 3
+            },
+            {
+                id: 12,
+                name: 'Hot Dog',
+                price: 6.00,
+                storeId: 3
             }
         ],
         paymentOptions: [
@@ -170,12 +195,14 @@ const speedyApp = new Vue({
         chooseDeliveryType(methodId) {
             this.types = this.deliveryOptions
             this.currSelection = methodId
+            this.title = 'Delivery Type'
 
             this.showOptions = true
             this.showOverview = false
         },
         chooseStore(methodId) {
             this.types = []
+            this.title = this.options[1].type
             this.storeOptions.forEach(element => {
                 if (element.type == this.options[1].type) {
                     this.types.push(element)
@@ -192,8 +219,9 @@ const speedyApp = new Vue({
         },
         chooseOrder(methodId) {
             this.types = []
+            this.title = this.options[1].chosen.name
             this.storeOptionItems.forEach(element => {
-                if (element.storeId == this.options[1].storeId) {
+                if (element.storeId === this.options[1].storeId) {
                     this.types.push(element)
                 }
             });
@@ -206,7 +234,8 @@ const speedyApp = new Vue({
         addPayment(methodId) {
             this.types = this.paymentOptions
             this.currSelection = methodId
-            
+            this.title = 'Payment Options'
+
             this.showOptions = true
             this.showOverview = false
         },

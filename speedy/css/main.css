@@ -46,14 +46,15 @@ a.link {
     border: none;
     border-bottom: 1px solid var(--light-white);
     font-family: 'Avenir', 'Arial', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
     outline: none;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     padding-bottom: .5rem;
     width: 100%; }
   .input-container .input {
     cursor: pointer;
-    height: 1rem; }
+    height: 1.5rem; }
   .input-container .fa {
     bottom: .5rem;
     color: var(--main-color);
@@ -94,14 +95,16 @@ a.link {
   max-width: 400px;
   width: 95%; }
 
+.options h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem; }
 .options li {
   border-bottom: 1px solid var(--light-white);
-  line-height: 2rem;
+  line-height: 3rem;
   list-style: none;
-  margin-bottom: 1rem;
   position: relative; }
 .options img {
-  bottom: 10;
+  bottom: 1rem;
   cursor: pointer;
   max-height: 15px;
   position: absolute;
