@@ -149,4 +149,10 @@ a {
     .fa {
         cursor: pointer;
     }
+
+    .price {
+        bottom: -.1rem;
+        position: absolute;
+        right: 35px;
+    }
 }

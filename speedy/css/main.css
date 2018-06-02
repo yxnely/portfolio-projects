@@ -111,5 +111,9 @@ a.link {
   right: 10; }
 .options .fa {
   cursor: pointer; }
+.options .price {
+  bottom: -.1rem;
+  position: absolute;
+  right: 35px; }
 
 /*# sourceMappingURL=main.css.map */
