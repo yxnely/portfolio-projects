@@ -55,7 +55,7 @@ const speedyApp = new Vue({
             },
             {
                 id: 3,
-                name: 'Red Robin',
+                name: 'IHOP',
                 type: 'Restaurant'
             },
             {
@@ -88,6 +88,56 @@ const speedyApp = new Vue({
                 name: 'Wendys\'s',
                 type: 'Fast Food'
             }
+        ],
+        storeOptionItems: [
+            {
+                id: 1,
+                name: 'Quesalupa Combo',
+                price: 6.50,
+                storeId: 1
+            },
+            {
+                id: 2,
+                name: 'Crunch Combo',
+                price: 5.50,
+                storeId: 1
+            },
+            {
+                id: 3,
+                name: 'Pizza Combo',
+                price: 5.00,
+                storeId: 1
+            },
+            {
+                id: 4,
+                name: 'Nachos Combo',
+                price: 6.00,
+                storeId: 1
+            },
+            {
+                id: 5,
+                name: 'Breakfast Combo',
+                price: 6.50,
+                storeId: 2
+            },
+            {
+                id: 6,
+                name: 'Lunch Combo',
+                price: 5.50,
+                storeId: 2
+            },
+            {
+                id: 7,
+                name: 'Lunch Buffet Combo',
+                price: 5.00,
+                storeId: 2
+            },
+            {
+                id: 8,
+                name: 'Dinner Combo',
+                price: 6.00,
+                storeId: 2
+            }
         ]
     },
     methods: {
@@ -96,14 +146,14 @@ const speedyApp = new Vue({
                 case 'chooseDeliveryType':
                     this.chooseDeliveryType(id)
                     break
-                case 'chooseRestaurant':
-                    this.chooseRestaurant()
+                case 'chooseStore':
+                    this.chooseStore(id)
                     break
                 case 'chooseOrder':
-                    this.chooseOrder()
+                    this.chooseOrder(id)
                     break
                 case 'addPayment':
-                    this.addPayment()
+                    this.addPayment(id)
                     break
             }
         },
@@ -114,13 +164,33 @@ const speedyApp = new Vue({
             this.showOptions = true
             this.showOverview = false
         },
-        chooseStore() {
-            console.log('chooseStore')
+        chooseStore(methodId) {
+            this.types = []
+            this.storeOptions.forEach(element => {
+                if (element.type == this.options[1].type) {
+                    this.types.push(element)
+                }
+            });
+
+            this.currSelection = methodId
+
+            this.showOptions = true
+            this.showOverview = false
         },
-        chooseOrder() {
-            console.log('chooseOrder')
+        chooseOrder(methodId) {
+            this.types = []
+            this.storeOptionItems.forEach(element => {
+                if (element.storeId == this.options[1].storeId) {
+                    this.types.push(element)
+                }
+            });
+
+            this.currSelection = methodId
+
+            this.showOptions = true
+            this.showOverview = false
         },
-        addPayment() {
+        addPayment(methodId) {
             console.log('addPayment')
         },
         itemChosen(id) {
@@ -129,21 +199,23 @@ const speedyApp = new Vue({
             
             this.options[chosenItem].chosen = this.types[typeSelection]
 
-            const newOption = {
-                id: 2,
-                method: 'chooseStore',
-                text: this.types[typeSelection].name,
-                type: this.types[typeSelection].name,
-                icon: 'fa fa-building',
-                chosen: ''
-            }
+            if (this.currSelection === 1) {
+                const newOption = {
+                    id: 2,
+                    method: 'chooseStore',
+                    text: this.types[typeSelection].name,
+                    type: this.types[typeSelection].name,
+                    storeId: this.types[typeSelection].id,
+                    icon: 'fa fa-building',
+                    chosen: ''
+                }
 
-            /* 
-                Insert to the original options
-                to appear on the main order screen
-            */
-           this.options.length > 3 ? this.options.splice(1, 1, newOption) : this.options.splice(1, 0, newOption)
-            
+                /* 
+                    Insert to the original options
+                    to appear on the main order screen
+                */
+                this.options.length > 3 ? this.options.splice(1, 1, newOption) : this.options.splice(1, 0, newOption)
+            }
 
             // Return to original options screen
             this.showOptions = false
