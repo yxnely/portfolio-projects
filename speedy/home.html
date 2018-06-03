@@ -48,7 +48,10 @@
 
 			<div class="options" v-show="showOptions">
 				<h2>{{ title }}</h2>
-				<li v-for="type in types">{{ type.name }} <span class="price" v-show="type.price">${{ type.price }}</span><img src="img/icon-plus.png" @click="itemChosen(type.id)"></img></li>
+				<li v-for="type in types">{{ type.name }} 
+					<span class="price" v-show="type.price">${{ type.price }}</span>
+					<img src="img/icon-plus.png" @click="itemChosen(type.id)"></img>
+				</li>
 			</div>
 		</div>
 	</body>
